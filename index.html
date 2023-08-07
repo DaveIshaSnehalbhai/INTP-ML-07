@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Index Page</title>
+    </head>
+
+    <body>
+        <h3>TuboFan Jet Dataset Prediction</h3>
+        <form name="index" action="/" method="post">
+            Cycle: <input type="text" name="c1"><br>
+            LPC outlet temperature (◦R): <input type="text" name="c2"><br>
+            LPT outlet temperature (◦R):  <input type="text" name="c3"> <br>          
+            HPC outlet pressure (psia):  <input type="text" name="c4">  <br>           
+            HPC outlet Static pressure (psia):  <input type="text" name="c5">    <br>   
+            Ratio of fuel flow to Ps30 (pps/psia): <input type="text" name="c6"><br>
+            Bypass Ratio: <input type="text" name="c7">      <br>                     
+            Bleed Enthalpy:  <input type="text" name="c8">     <br>                       
+            High-pressure turbines Cool air flow: <input type="text" name="c9"><br>
+            Low-pressure turbines Cool air flow:  <input type="text" name="c10"> <br>
+            <button type="submit">Submit</button>  
+        </form>
+
+        {% if prediction%}
+        <h2>The RUL is: <input value={{prediction}} ></h2>
+        {% endif %}
+    </body>
+</html>
